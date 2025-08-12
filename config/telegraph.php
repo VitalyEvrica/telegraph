@@ -4,6 +4,11 @@ use DefStudio\Telegraph\Telegraph;
 
 return [
     /*
+     * Adds column "language_code" to telegraph_chats table and get this value from the first message.
+     */
+    'add_column_language_code' => true,
+
+    /*
      * Telegram api base url, it can be overridden
      * for self-hosted servers
      */

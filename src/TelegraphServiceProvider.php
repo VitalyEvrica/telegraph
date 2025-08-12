@@ -28,5 +28,10 @@ class TelegraphServiceProvider extends PackageServiceProvider
             ->hasTranslations();
 
         $this->app->bind('telegraph', fn () => new Telegraph());
+
+        $this->publishes([
+            __DIR__ . '/Http/TeleGraphAndGram.php' => app_path('Http/TeleGraphAndGram.php'),
+        ], 'telegraph-add-default-controller-to-http-folder');
+
     }
 }

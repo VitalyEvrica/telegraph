@@ -10,6 +10,9 @@ return new class () extends Migration {
         Schema::create('telegraph_chats', function (Blueprint $table) {
             $table->id();
             $table->string('chat_id');
+            if (config('telegraph.add_column_language_code', true)) {
+                $table->string('language_code')->nullable();
+            }
             $table->string('name')->nullable();
 
             $table->foreignId('telegraph_bot_id')->constrained('telegraph_bots')->cascadeOnDelete();

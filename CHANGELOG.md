@@ -2,6 +2,12 @@
 
 All notable changes to `telegraph` will be documented in this file.
 
+## v1.60.1 - 2025-08-12
+
+### What's Changed
+
+* Added language_code column and added class TeleGraphAndGram, which extends WebhookHandler with some useful commands
+
 ## v1.60.0 - 2025-07-14
 
 ### What's Changed

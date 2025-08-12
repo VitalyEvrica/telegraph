@@ -172,6 +172,19 @@ abstract class WebhookHandler
 
             if (config('telegraph.security.store_unknown_chats_in_db', false)) {
                 $this->createChat($telegramChat, $this->chat);
+
+                if (config('telegraph.add_column_language_code', true) and isset($this->chat['id'], $this->chat['chat_id'], $this->chat['telegraph_bot_id'])
+                ) {
+                    $tgData = $this->message->toArray();
+                    if(isset($tgData['from']['language_code']) and ctype_alpha($tgData['from']['language_code'])){
+                        $lang = $tgData['from']['language_code'];
+                        TelegraphChat::where([
+                            'id'               => $this->chat['id'],
+                            'chat_id'          => $this->chat['chat_id'],
+                            'telegraph_bot_id' => $this->chat['telegraph_bot_id'],
+                        ])->update(['language_code' => $lang]);
+                    }
+                }
             }
         }
     }
