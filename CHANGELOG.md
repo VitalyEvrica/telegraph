@@ -2,6 +2,12 @@
 
 All notable changes to `telegraph` will be documented in this file.
 
+## v1.60.2 - 2025-08-12
+
+### What's Changed
+
+* Tested. Working.
+
 ## v1.60.1 - 2025-08-12
 
 ### What's Changed

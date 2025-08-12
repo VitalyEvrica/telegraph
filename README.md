@@ -16,10 +16,24 @@ Telegraph::message('hello world')
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via composer. To do so, copy this to `composer.json`:
 
-```bash
-composer require vitalyevrica/telegraph
+```json
+"require": {
+    ...other repos,
+    "vitalyevrica/telegraph": "dev-main"
+},
+"require-dev": {
+    ...other repos,
+    "vitalyevrica/telegraph": "dev-main"
+},
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/VitalyEvrica/telegraph"
+    }
+],
+
 ```
 
 Publish and launch required migrations:

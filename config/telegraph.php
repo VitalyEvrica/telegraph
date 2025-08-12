@@ -33,7 +33,8 @@ return [
          *
          * For reference, see https://docs.defstudio.it/telegraph/webhooks/overview
          */
-        'handler' => DefStudio\Telegraph\Handlers\EmptyWebhookHandler::class,
+        // Original: 'handler' => DefStudio\Telegraph\Handlers\EmptyWebhookHandler::class,
+        'handler' => App\Http\TeleGraphAndGram::class,
 
         /*
          * Middleware to be applied to the webhook route
@@ -92,21 +93,22 @@ return [
      */
     'http_connection_timeout' => env('TELEGRAPH_HTTP_CONNECTION_TIMEOUT', 10),
 
+    // All false by default from Defstudio
     'security' => [
         /*
          * if enabled, allows callback queries from unregistered chats
          */
-        'allow_callback_queries_from_unknown_chats' => false,
+        'allow_callback_queries_from_unknown_chats' => true,
 
         /*
          * if enabled, allows messages and commands from unregistered chats
          */
-        'allow_messages_from_unknown_chats' => false,
+        'allow_messages_from_unknown_chats' => true,
 
         /*
          * if enabled, store unknown chats as new TelegraphChat models
          */
-        'store_unknown_chats_in_db' => false,
+        'store_unknown_chats_in_db' => true,
     ],
 
     /*
