@@ -1,5 +1,5 @@
 {
-    "name": "VitalyEvrica/telegraph",
+    "name": "vitalyevrica/telegraph",
     "description": "A Laravel facade to interact with Telegram Bots(fork)",
     "keywords": [
         "defstudio",
