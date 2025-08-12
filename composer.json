@@ -1,17 +1,18 @@
 {
-    "name": "defstudio/telegraph",
-    "description": "A laravel facade to interact with Telegram Bots",
+    "name": "VitalyEvrica/telegraph",
+    "description": "A Laravel facade to interact with Telegram Bots(fork)",
     "keywords": [
         "defstudio",
         "laravel",
-        "telegraph"
+        "telegraph",
+        "telegram"
     ],
-    "homepage": "https://github.com/defstudio/telegraph",
+    "homepage": "https://github.com/VitalyEvrica/telegraph",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fabio Ivona",
-            "email": "fabio.ivona@defstudio.it",
+            "name": "Vit",
+            "email": "evrica.vit@gmail.com",
             "role": "Developer"
         }
     ],

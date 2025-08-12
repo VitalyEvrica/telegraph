@@ -40,7 +40,7 @@ php artisan vendor:publish --tag="telegraph-config"
 php artisan vendor:publish --tag="telegraph-translations"
 ```
 ```bash
-php artisan vendor:publish --tag=telegraph-add-default-controller-to-http-folder
+php artisan vendor:publish --tag="telegraph-add-default-controller-to-http-folder"
 ```
 
 ## Usage & Documentation
