@@ -183,6 +183,9 @@ abstract class WebhookHandler
                             'chat_id'          => $this->chat['chat_id'],
                             'telegraph_bot_id' => $this->chat['telegraph_bot_id'],
                         ])->update(['language_code' => $lang]);
+
+                        //adds lang to obj
+                        $this->chat->language_code = $lang;
                     }
                 }
             }
