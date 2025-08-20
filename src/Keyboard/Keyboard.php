@@ -92,6 +92,11 @@ class Keyboard implements Arrayable
                     $rowButton = $rowButton->switchInlineQuery($button['switch_inline_query_current_chat'] ?? '')->currentChat();
                 }
 
+                if (array_key_exists('copy_text', $button)) {
+                    $rowButton = $rowButton->copyText($button['copy_text']['text']);
+                }
+
+
                 $rowButtons[] = $rowButton;
             }
 

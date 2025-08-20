@@ -2,6 +2,13 @@
 
 All notable changes to `telegraph` will be documented in this file.
 
+## v1.60.3 - 2025-08-20
+
+### What's Changed
+
+* Button::make("📋 Copy to Clipboard")->copyText('https://example.com/share/123'),
+
+
 ## v1.60.2 - 2025-08-12
 
 ### What's Changed
